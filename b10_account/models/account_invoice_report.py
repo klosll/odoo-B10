@@ -7,7 +7,7 @@ class AccountInvoiceReport(models.Model):
     price_total_with_tax = fields.Float(
         string="Total Price with Taxes",
         readonly=True,
-        group_operator='sum',
+        aggregator='sum',
     )
 
     def _select(self):
